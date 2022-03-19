@@ -1,6 +1,4 @@
-const mongoose = require('mongoose')                
-
-mongoose.connect('mongodb://localhost/K20');       
+const mongoose = require('./connectDB')                
 
 const UserSchema = mongoose.Schema({               
   username: String,
@@ -14,4 +12,8 @@ const UserSchema = mongoose.Schema({
 const UserModel = mongoose.model('user', UserSchema)
 
 module.exports = UserModel
+
+// UserModel.create({
+//   username: 'Chiến'
+// }).then( data => console.log(data))
 
